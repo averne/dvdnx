@@ -57,7 +57,7 @@ void __appExit(void) {
 int main() {
 #ifdef DEBUG
     g_debug_file = fopen("sdmc:/dvdnx.log", "w");
-    if (g_debug_file == NULL) fatalSimple(0x00f);
+    if (g_debug_file == NULL) fatalThrow(0x00f);
 #endif
 
     LOG("Starting\n");

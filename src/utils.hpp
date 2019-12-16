@@ -28,7 +28,7 @@ extern FILE *g_debug_file;
 })
 #define TRY_GOTO(x, l)   TRY(x, goto l)
 #define TRY_RETURN(x, v) TRY(x, return v)
-#define TRY_FATAL(x)     TRY(x, fatalSimple(rc))
+#define TRY_FATAL(x)     TRY(x, fatalThrow(rc))
 
 #define SERV_INIT(s, ...) TRY_FATAL(CONCATENATE(s, Initialize)(__VA_ARGS__))
 #define SERV_EXIT(s, ...) CONCATENATE(s, Exit)(__VA_ARGS__)
